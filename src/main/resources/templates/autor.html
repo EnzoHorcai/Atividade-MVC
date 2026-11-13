@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca - Autor</title>
+</head>
+<body>
+<h1>Autor</h1>
+<nav>
+    <a th:href="@{/livros}">Livros</a> |
+    <a th:href="@{/autor}">Autor</a> |
+    <a th:href="@{/categorias}">Categorias</a> |
+    <a th:href="@{/emprestimos}">Empréstimos</a> |
+    <a th:href="@{/usuarios}">Usuários</a>
+</nav>
+<p>Nome: <span th:text="${autor.nome}"></span></p>
+<p>Nacionalidade: <span th:text="${autor.nacionalidade}"></span></p>
+<p>Obras: <span th:text="${autor.obras}"></span></p>
+</body>
+</html>

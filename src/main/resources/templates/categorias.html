@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca - Categorias</title>
+</head>
+<body>
+<h1>Categorias</h1>
+<nav>
+    <a th:href="@{/livros}">Livros</a> |
+    <a th:href="@{/autor}">Autor</a> |
+    <a th:href="@{/categorias}">Categorias</a> |
+    <a th:href="@{/emprestimos}">Empréstimos</a> |
+    <a th:href="@{/usuarios}">Usuários</a>
+</nav>
+<h2>Livros por gênero</h2>
+<ul>
+    <li th:each="livro : ${categoria.livrosGenero}" th:text="${livro.titulo} + ' - ' + ${livro.autor}"></li>
+</ul>
+<h2>Livros por área</h2>
+<ul>
+    <li th:each="livro : ${categoria.livrosArea}" th:text="${livro.titulo} + ' - ' + ${livro.autor}"></li>
+</ul>
+</body>
+</html>
