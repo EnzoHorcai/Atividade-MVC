@@ -1,11 +1,29 @@
 package com.biblioteca.model;
 
 public class Livro {
+    private Long id;
     private String titulo;
     private String autor;
     private String isbn;
 
-    //getters e setters
+    public Livro() {
+    }
+
+    public Livro(Long id, String titulo, String autor, String isbn) {
+        this.id = id;
+        this.titulo = titulo;
+        this.autor = autor;
+        this.isbn = isbn;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getTitulo() {
         return titulo;
     }
