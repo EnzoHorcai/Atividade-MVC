@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Biblioteca</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            color: #262626;
+            background: #f4f1ea;
+        }
+
+        header {
+            padding: 24px;
+            background: #ffffff;
+            border-bottom: 1px solid #ded9cc;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #355a3b;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 48px auto;
+            padding: 0 24px;
+        }
+
+        .welcome {
+            padding: 36px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        .welcome h2 {
+            margin-top: 0;
+        }
+
+        nav {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        nav a {
+            padding: 16px;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+            background: #355a3b;
+            border-radius: 8px;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            background: #26472d;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Biblioteca</h1>
+</header>
+
+<main>
+    <section class="welcome">
+        <h2>Bem-vindo</h2>
+        <p>Escolha uma seção:</p>
+
+        <nav aria-label="Seções da biblioteca">
+            <a th:href="@{/livros}">Livros</a>
+            <a th:href="@{/autor}">Autor</a>
+            <a th:href="@{/categorias}">Categorias</a>
+            <a th:href="@{/emprestimos}">Empréstimos</a>
+            <a th:href="@{/usuarios}">Usuários</a>
+        </nav>
+    </section>
+</main>
+</body>
+</html>
